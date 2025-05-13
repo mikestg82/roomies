@@ -36,6 +36,14 @@ android {
 
 dependencies {
 
+    implementation(libs.room.common.jvm)
+    // Room
+    val room_version = "2.6.1"
+    // Use the latest version of Room
+    implementation("androidx.room:room-runtime:$room_version")
+    // For Java
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
