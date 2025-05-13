@@ -37,7 +37,7 @@ public class Groceries extends AppCompatActivity
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
-        ImageButton add_Task = findViewById(R.id.add_task);
+        ImageButton add_Item = findViewById(R.id.add_item);
 
         Button homescreenButton = findViewById(R.id.back_button1);
         homescreenButton.setOnClickListener(v -> {
@@ -45,17 +45,17 @@ public class Groceries extends AppCompatActivity
             startActivity(intent);
         });
 
-        add_Task.setOnClickListener(new View.OnClickListener()
+        add_Item.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                View task_dialog = LayoutInflater.from(Groceries.this).inflate(R.layout.task_add, null);
+                View task_dialog = LayoutInflater.from(Groceries.this).inflate(R.layout.groceries_add, null);
 
                 AlertDialog.Builder b = new AlertDialog.Builder(Groceries.this);
                 b.setView(task_dialog);
 
-                EditText ask_task = task_dialog.findViewById(R.id.new_task);
+                EditText ask_item = task_dialog.findViewById(R.id.new_groceries);
                 Button cancel = task_dialog.findViewById(R.id.c_t);
                 Button add = task_dialog.findViewById(R.id.a_t);
 
@@ -76,7 +76,7 @@ public class Groceries extends AppCompatActivity
                     @Override
                     public void onClick(View v)
                     {
-                        String task = ask_task.getText().toString().trim();
+                        String task = ask_item.getText().toString().trim();
 
                         if (!task.isEmpty())
                         {

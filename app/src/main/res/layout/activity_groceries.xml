@@ -26,7 +26,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/add_task_layout"
+        android:id="@+id/add_item_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/heading"
@@ -67,7 +67,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/add_task"
+            android:id="@+id/add_item"
             android:layout_width="41dp"
             android:layout_height="40dp"
             android:layout_marginStart="188dp"
@@ -86,7 +86,7 @@
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/add_task_layout">
+        android:layout_below="@+id/add_item_layout">
 
     </androidx.recyclerview.widget.RecyclerView>
 
